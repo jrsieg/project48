@@ -35,7 +35,7 @@ function App() {
         )
         .catch( async response => {
           console.log("error")
-          setVotes(<ion-icon name='alert-circle-outline'></ion-icon> );
+          setVotes(<ion-icon name="sad-outline"></ion-icon> );
           setError("No data for this city. Try another one");
           setRatings("");
           setRestaurants("");
