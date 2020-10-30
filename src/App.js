@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-const baseURl = 'https://api.airvisual.com/v2/city?';
-const key = 'c3606135-b947-439f-8e8b-57ce6253a66a';
-
+import weather from 
 
 function App() {
   return (
@@ -15,19 +13,7 @@ function App() {
 
       <h3>Weather</h3>
       </div>
+  )}
 
-  function fetchData {
-      e.preventDefault()
-      url = `${baseURl}city=Indianapolis&state=Indiana&country=USA&key=${key}`
-      fetch(url)
-        .then(result => result.json())
-        .then(jsonified => displayData(jsonified));
-    function displayData(jsonified) {
-      console.log(jsonified)
-    let pr=document.getElementById("pr")
-    precipitation = jsonified.data.current.weather.pr
-    pr.innerHTML = pr.innerHTML+ (`${precipitation}`);
-  }
-}
 
 export default App;
