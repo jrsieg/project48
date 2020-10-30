@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import weather from 
+import Weather from './components/apps/Weather';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div>nasa</div>
       <h4>return: satellite image </h4>
 
-      <h3>Weather</h3>
+      <div className="box"><Weather /></div>
       </div>
   )}
 

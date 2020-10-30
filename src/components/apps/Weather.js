@@ -1,7 +1,7 @@
 import React from 'react';
 
-const baseURl = 'https://api.airvisual.com/v2/city?';
-const key = 'c3606135-b947-439f-8e8b-57ce6253a66a';
+const baseURl = 'https://openweathermap.org/';
+const key = '01c905cbdcf2eb6417b6745dc9318f11';
 
 // const weather = (props) => {
 //         url = `${baseURl}city=Indianapolis&state=Indiana&country=USA&key=${key}`
@@ -17,8 +17,8 @@ const key = 'c3606135-b947-439f-8e8b-57ce6253a66a';
 //       }
 //     }
 
-function weather (props) {
-    url = `${baseURl}city=Indianapolis&state=Indiana&country=USA&key=${key}`
+function Weather (props) {
+    const url = `${baseURl}api.openweathermap.org/data/2.5/weather?q={Indianapolis}&appid=${key}`
     fetch(url)
     .then(result => result.json())
     .then(json => {
@@ -31,4 +31,4 @@ function weather (props) {
     )
 }
 
-export default weather; 
+export default Weather; 
