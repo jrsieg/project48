@@ -1,7 +1,6 @@
 import React from 'react';
-
 import './App.css';
-
+import Weather from '../../../project48/src/components/apps/Weather';
 
 function App() {
   return (
@@ -12,10 +11,9 @@ function App() {
       <div>nasa</div>
       <h4>return: satellite image </h4>
 
-      <div>weather</div>
-      <h4>return: weather</h4>
-    </div>
-  );
-}
+      <div className="box"><Weather /></div>
+      </div>
+  )}
+
 
 export default App;
