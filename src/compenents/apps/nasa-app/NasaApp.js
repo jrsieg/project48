@@ -31,10 +31,26 @@ class NasaApp extends React.Component {
   getCoordinates(position) {
 
       this.setState({
-        latitude: position.coords.latitude.toFixed(5),
-        longitude: position.coords.longitude.toFixed(5)
+        latitude: position.coords.latitude.toFixed(2),
+        longitude: position.coords.longitude.toFixed(2)
       })
+      this.reverseGeocodeCoordinates();
   };
+
+  reverseGeocodeCoordinates(){
+    fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/locations/${this.state.latitude}${this.state.longitude}/nearbyCities?minPopulation=3000&radius=100`, {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
+        "x-rapidapi-key": "e709eaa768msha339c8dd2905ef3p10f902jsne18543303916"
+      }
+    })
+    .then(response => response.json())
+    .then(data => this.setState({userCity: data.data[0].city}))
+     .catch(error => alert(error))
+  }
+
+
 
   handleLocationError(error){
   
@@ -66,6 +82,10 @@ class NasaApp extends React.Component {
 
             <p>
                 Longitude: {this.state.longitude}
+            </p>
+
+            <p>
+              Nearest City: {this.state.userCity}
             </p>
 
             {    
