@@ -139,7 +139,7 @@ function App() {
             <Weather weather={temp} />
             <ShowZomato name={restaurants} rating={ratings} votes={votes} error={error}/>
 
-              <NasaApp image={imageURL} />  {/* this feeds the url to NASA.js where it convert to image */}
+              <NasaApp image={imageURL} />  {/* I'm juswt calling the component here and manipulating the image with #geoImage in App.css */}
           
         </div>
 
