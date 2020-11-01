@@ -6,16 +6,17 @@ function ShowZomato(props){
     
     return (
         <div className="box">
-            <h3>{props.name}</h3>
-            <h3> {props.rating}</h3>
-            <p>{props.votes}</p>
-            <p>{props.error}</p> 
+            <div className="icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+            <p>{props.name}</p>
+            <div className={!props.error ? 'rating' : "hide"}>
+                <p> <ion-icon name="star-outline"></ion-icon> {props.rating} </p>
+                <p> <ion-icon name="chatbubbles-outline"></ion-icon> {props.votes} </p>
+            </div>
             
             <button className={!props.error ? '' : "hide"} >Visit</button>
             
         </div>
     ) 
-    
     
 }
 
