@@ -1,8 +1,10 @@
+
 import React,  { useEffect, useState } from 'react';
 import './App.css';
 import ShowZomato from './Zomato/Zomato';
 import Weather from './Weather/Weather';
 import NasaApp from './Nasa/Nasa'; // from Adolfo's version
+
 
 
 function App() {
@@ -141,10 +143,11 @@ function App() {
           
         </div>
 
-        </div>
-      
+      <div className="box"><Weather /></div>
+      </div>
     </div>
-  );
-}
+  )}
+  
+
 
 export default App;
