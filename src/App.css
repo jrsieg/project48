@@ -1,38 +1,123 @@
-.App {
+.wrapper{
+  min-height:100vh;
+  background-image: #fff;
+  align-content:center;
+  display:block;
+  position:relative;
+}
+
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color:tomato;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.logoIcon{
+  font-size:48px;
+  color:tomato;
+  border:3px tomato solid;
+  border-radius:50%;
+  padding:3px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: inline-grid;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+.app{
+  
+  text-align: center;
+  display:flex;
+  justify-content:space-around;
+  align-content:center;
+  align-items: center;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchBox{
+  
+  text-align: center;
+  align-content:center;
+  align-items: center;
+  margin-bottom:40px;
+  
 }
+
+.searchInput, .searchButton{
+  padding:10px 20px;
+  margin:5px;
+}
+
+.searchInput{
+  width:50%;
+}
+
+.content {
+  text-align: center;
+  display:flex;
+  justify-content:space-around;
+  align-content:center;
+  align-items: center;
+  
+}
+
+.box{
+  display:grid;
+  text-align: center;
+  padding:30px;
+  color:black;
+  background-color: white;
+  width:150px;
+  height:150px;
+  margin: 0 20px;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  border-radius: 16px;
+  
+}
+
+.rating{
+  display: flex;
+  justify-content:space-around;
+  align-content:center;
+  align-items: center;
+}
+
+.box:hover{
+  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s, transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transform: translateY(0) scale(1);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+#geoImage{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+}
+
+.centerH{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hide{
+  display:none;
+}
+
+.icon{
+  font-size:36px;
+}
+
