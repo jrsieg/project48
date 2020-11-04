@@ -13,7 +13,7 @@ function ShowZomato(props){
                 <p> <ion-icon name="chatbubbles-outline"></ion-icon> {props.votes} </p>
             </div>
             
-            <button className={!props.error ? '' : "hide"} >Visit</button>
+            {/* <button className={!props.error ? '' : "hide"} >Visit</button> */}
             
         </div>
     ) 
